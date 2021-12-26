@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #ddd;
+        }
+        /* 声明动画 旋转360度 */
+        @keyframes x{
+            from {
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        #taji-wrapper{
+            height: 100vh;/*viewpoint height 可视窗口*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        
+        #taiji{
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            animation: x 5s infinite linear;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        }
+        /*媒体查询*/
+        @media(max-width: 500px){ 
+            #taiji{
+                width: 200px;
+                height: 200px;
+            }
+        }
+        #taiji>:nth-child(1){
+            width: 50%;
+            height: 100%;
+            background-color: black;
+            position:absolute;
+            left: 0;
+        }
+        #taiji>:nth-child(2){
+            width: 50%;
+            height: 100%;
+            background-color: white;
+            position:absolute;
+            right: 0;
+        }
+        #taiji>:nth-child(3){
+            width: 200px;
+            height: 200px;
+            position:absolute;
+            left: 100px;
+            border-radius: 50%;
+            background-color: black;
+        }
+        @media(max-width: 500px){ 
+            #taiji>:nth-child(3){
+                width: 100px;
+                height: 100px;
+                left: 50px;
+            }
+        }
+        #taiji>:nth-child(4){
+            width: 200px;
+            height: 200px;
+            position:absolute;
+            left: 100px;
+            bottom: 0px;
+            border-radius: 50%;
+            background-color: white;
+        }
+        @media(max-width: 500px){ 
+            #taiji>:nth-child(4){
+                width: 100px;
+                height: 100px;
+                left: 50px;
+                bottom: 0px;
+            }
+        }
+
+        #taiji>:nth-child(5){
+            width: 50px;
+            height: 50px;
+            position:absolute;
+            left: 50%;
+            top: 75px;
+            border-radius: 50%;
+            background-color: white;
+            margin-left: -25px;
+        }
+        @media(max-width: 500px){ 
+            #taiji>:nth-child(5){
+                width: 25px;
+                height: 25px;
+                top:37.5px;
+                margin-left: -12.5px;
+            }
+        }
+        #taiji>:nth-child(6){
+            width: 50px;
+            height: 50px;
+            position:absolute;
+            left: 50%;
+            bottom:75px;
+            border-radius: 50%;
+            background-color: black;
+            margin-left: -25px;
+        }
+        @media(max-width: 500px){ 
+            #taiji>:nth-child(6){
+                width: 25px;
+                height: 25px;
+                bottom: 37.5px;
+                margin-left: -12.5px;
+            }
+        }
+        #taiji-miaoshu{
+            margin-top: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="taji-wrapper">
+    <div id="taiji">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="taiji-miaoshu">
+        道可道,非常道
+    </div>
+    </div>  
+    
+</body>
+</html>
